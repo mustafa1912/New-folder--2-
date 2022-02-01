@@ -1,0 +1,33 @@
+@import './color/color';
+div {
+    padding: 10px;
+    margin: 10px;
+}
+
+// .parent {
+//     background-color: $maincolor;
+//     padding: 50px;
+//     .contaner {
+//         margin: 10px;
+//     }
+// }
+%main {
+    background-color: $dark;
+    padding: 50px;
+}
+
+li {
+    &:hover {
+        background-color: $maincolor;
+    }
+}
+
+$theme:'dark';
+@if $theme=='dark' {
+    body {
+        background-color: $dark;
+    }
+    .parent {
+        @extend %main;
+    }
+}
